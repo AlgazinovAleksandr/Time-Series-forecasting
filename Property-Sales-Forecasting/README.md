@@ -1,0 +1,9 @@
+Time series is one the common data structures in Data Science problems. Due to the nature of the data, where we look at one object over a period of time, many special statistical methods were invented for forecasting time series. In this project, we will dive deeper and consider a multi time series (panel data) problem. Despite that models such as ARIMA, SARIMA, and ARIMAX very designed specially for time series, many researhers still use classical Machine Learning methods, such as gradient boosting, for solving these problems. Therefore, I want to understand when it is necessary to go beyond statistical methods and use more complex approaches. Also I will try to answer the question, whether it makes sense to use statistical models ever at all.
+
+In this project, there are several jupyter notebooks (as well as file TS_project_model_forecasting.py, used for forecasting future for some models):
+
+1) TS_project_data_analysis - Introduction to the task: we analyze the features, target, and also discuss the basic concepts from the theory of Time Series. We check autocorrelation, stationarity, and make meaningful conclusions
+2) TS_project_baseline_model - We look at the trend and seasonality, create lag features, and discuss different approaches to forecasting the future. We analyze the features of our task (working with panel data), and build CatBoost as a baseline model. Got the metric MAPE = 17.88%
+3) TS_H2O_and_LSTM - We apply AutoML methods and neural networks to try to beat the baseline. H2O allowed us to make minor improvements on the target metric (MAPE), while LSTM performed worse than CatBoost. We discuss why LSTM did not work, as well as why H2O seemed to overfit.
+
+New jupyter notebooks will be uploaded soon. There we apply statistical methods (such as ARIMA), as well as try to improve the performance of GBM (try different Python implementations of boosting, as well as select proper loss function and hyperparameters).
